@@ -1,19 +1,19 @@
-/* ===== Estilos generales ===== */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f9;
-    padding-top: 55px; /* espacio para el encabezado fijo */
-    overflow-x: hidden; /* evita desplazamiento lateral */
+    padding-top: 55px; 
+    overflow-x: hidden; 
 }
 
-/* ===== Encabezado fijo ===== */
+
 #encabezado {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;              /* ✅ en lugar de 100vw */
+    width: 100%;            
     box-sizing: border-box;
     background-color: #222;
     color: white;
@@ -31,7 +31,7 @@ body {
     margin: 0;
 }
 
-/* ===== Navegación ===== */
+
 #encabezado nav ul {
     list-style: none;
     display: flex;
@@ -57,7 +57,7 @@ body {
     color: #222;
 }
 
-/* ===== Contenedor principal ===== */
+
 .contenedor-columnas {
     display: flex;
     justify-content: space-around;
@@ -86,7 +86,7 @@ body {
     color: #444;
 }
 
-/* ===== Imagen ===== */
+
 .imagen-chica {
     width: 140px;
     height: auto;
@@ -96,7 +96,7 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* ===== Ícono flotante ===== */
+
 #icono-flotante {
     position: fixed;
     bottom: 20px;
@@ -116,7 +116,7 @@ body {
     transform: rotate(15deg) scale(1.2);
 }
 
-/* ===== Tarjetas informativas ===== */
+
 .tarjeta-info {
     background-color: #e0f7fa;
     border: 1px solid #00bcd4;
@@ -131,7 +131,6 @@ body {
     transform: scale(1.05);
 }
 
-/* ===== Sección adicional ===== */
 .extra {
     background-color: #fff;
     margin: 30px auto;
@@ -152,7 +151,7 @@ body {
     text-align: justify;
 }
 
-/* ===== Pie de página ===== */
+
 #pie-pagina {
     background-color: #222;
     color: white;
@@ -161,7 +160,7 @@ body {
     margin-top: 30px;
 }
 
-/* ===== Versión móvil ===== */
+
 @media (max-width: 768px) {
     .contenedor-columnas {
         flex-direction: column;
