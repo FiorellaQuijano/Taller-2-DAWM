@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    background-color: #f4f4f9; 
+    padding-top: 100px; 
+    overflow-y: auto;
+}
+
+#logo {
+    height: 48px;   
+    width: auto;    
+    margin-bottom: 10px;
+    border-radius: 50%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+#encabezado { 
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    z-index: 1000;
+    box-sizing: border-box; 
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+#encabezado nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+#encabezado nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    
+    transition: background-color 0.3s ease; 
+}
+
+
+#encabezado nav ul li a:hover {
+    background-color: #555; 
+}
+
+
+
+#columna-especial {
+    border-left: 1px solid #ccc; 
+    padding-left: 20px;
+}
+
+
+.contenedor-columnas { 
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 20px; 
+}
+
+.columna {
+    flex: 1; 
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+
+.columna p {
+    line-height: 1.6;
+    color: #666;
+}
+
+
+.contenedor-relativo {
+    position: relative; 
+    height: 60px; 
+    margin-top: 10px;
+    border: 1px dashed #999;
+}
+
+
+#icono-flotante {
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+    background-color: gold;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001; 
+}
+
+
+.tarjeta-info {
+    padding: 10px;
+    background-color: #e0f7fa;
+    border: 1px solid #00bcd4;
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+    cursor: pointer;
+}
+
+.tarjeta-info:hover { 
+    background-color: #b2ebf2;
+    transform: scale(1.05); 
+}
+
+/* Pie de página */
+#pie-pagina {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+
+@media (max-width: 768px) {
+    
+    .contenedor-columnas {
+        flex-direction: column;
+    }
+    
+  
+    .imagen-chica {
+        width: 180px; 
+        max-width: 250px; 
+        height: auto;
+        display: block;
+        margin: 15px auto;
+        border-radius: 8px;
+    }
+
+    
+    .columna h2 {
+        font-size: 1.2em; 
+    }
+    
+}
