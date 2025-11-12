@@ -1,148 +1,193 @@
+/* ===== Estilos generales ===== */
 body {
-    font-family: Arial, sans-serif; 
-    margin: 0; 
-    padding: 0; 
-    background-color: #f4f4f9; 
-    padding-top: 100px; 
-    overflow-y: auto;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    padding-top: 55px; /* espacio para el encabezado fijo */
+    overflow-x: hidden; /* evita desplazamiento lateral */
 }
 
-#logo {
-    height: 48px;   
-    width: auto;    
-    margin-bottom: 10px;
-    border-radius: 50%; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-}
-
-#encabezado { 
-    position: fixed; 
+/* ===== Encabezado fijo ===== */
+#encabezado {
+    position: fixed;
     top: 0;
-    width: 100%;
-    background-color: #333;
+    left: 0;
+    width: 100%;              /* ✅ en lugar de 100vw */
+    box-sizing: border-box;
+    background-color: #222;
     color: white;
-    padding: 10px 20px;
-    z-index: 1000;
-    box-sizing: border-box; 
-    display: flex; 
-    justify-content: space-between;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 6px 15px;
+    z-index: 1000;
+    height: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+#encabezado h1 {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* ===== Navegación ===== */
 #encabezado nav ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+#encabezado nav ul li {
+    margin: 0;
 }
 
 #encabezado nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 6px 10px;
+    font-size: 0.9rem;
     display: block;
-    
-    transition: background-color 0.3s ease; 
+    transition: background-color 0.3s ease;
 }
-
 
 #encabezado nav ul li a:hover {
-    background-color: #555; 
+    background-color: #f5b301;
+    color: #222;
 }
 
-
-
-#columna-especial {
-    border-left: 1px solid #ccc; 
-    padding-left: 20px;
-}
-
-
-.contenedor-columnas { 
+/* ===== Contenedor principal ===== */
+.contenedor-columnas {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     padding: 20px;
-    gap: 20px; 
+    gap: 20px;
 }
 
 .columna {
-    flex: 1; 
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
     padding: 15px;
     background-color: white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
+.columna:hover {
+    transform: translateY(-5px);
+}
 
 .columna p {
     line-height: 1.6;
-    color: #666;
+    color: #444;
 }
 
-
-.contenedor-relativo {
-    position: relative; 
-    height: 60px; 
-    margin-top: 10px;
-    border: 1px dashed #999;
+/* ===== Imagen ===== */
+.imagen-chica {
+    width: 140px;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-
+/* ===== Ícono flotante ===== */
 #icono-flotante {
-    position: absolute; 
-    top: 10px; 
-    right: 10px; 
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
     background-color: gold;
-    padding: 5px 10px;
+    padding: 6px 9px;
     border-radius: 50%;
     font-weight: bold;
+    font-size: 1rem;
+    opacity: 0.9;
     cursor: pointer;
-    z-index: 1001; 
+    transition: transform 0.3s ease;
+    z-index: 2000;
 }
 
+#icono-flotante:hover {
+    transform: rotate(15deg) scale(1.2);
+}
 
+/* ===== Tarjetas informativas ===== */
 .tarjeta-info {
-    padding: 10px;
     background-color: #e0f7fa;
     border: 1px solid #00bcd4;
-    transition: transform 0.3s ease, background-color 0.3s ease; 
-    cursor: pointer;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.tarjeta-info:hover { 
+.tarjeta-info:hover {
     background-color: #b2ebf2;
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
-/* Pie de página */
+/* ===== Sección adicional ===== */
+.extra {
+    background-color: #fff;
+    margin: 30px auto;
+    padding: 25px;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.extra h2 {
+    color: #222;
+    text-align: center;
+}
+
+.extra p {
+    color: #444;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* ===== Pie de página ===== */
 #pie-pagina {
-    background-color: #333;
+    background-color: #222;
     color: white;
     text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+    padding: 15px 0;
+    margin-top: 30px;
 }
 
-
+/* ===== Versión móvil ===== */
 @media (max-width: 768px) {
-    
     .contenedor-columnas {
         flex-direction: column;
-    }
-    
-  
-    .imagen-chica {
-        width: 180px; 
-        max-width: 250px; 
-        height: auto;
-        display: block;
-        margin: 15px auto;
-        border-radius: 8px;
+        align-items: center;
     }
 
-    
     .columna h2 {
-        font-size: 1.2em; 
+        font-size: 1.2em;
+        text-align: center;
     }
-    
+
+    .imagen-chica {
+        width: 110px;
+        margin: 10px auto;
+    }
+
+    #encabezado h1 {
+        font-size: 1rem;
+    }
+
+    #encabezado nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .extra {
+        width: 90%;
+    }
 }
